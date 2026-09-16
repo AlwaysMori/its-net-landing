@@ -56,8 +56,8 @@ export default function Services() {
                   Fiber Optic Infrastructure
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[#5B6B84]">
-                  Jaringan FO terpasang Simpang Pematang – Pasar KTM Mesuji
-                  Timur dengan 25 closure di sepanjang jalur.
+                  Jaringan fiber optik sendiri yang terus berkembang. Cek
+                  lokasi Anda — dalam maupun luar jalur, bisa diajukan survey.
                 </p>
               </article>
             </Reveal>

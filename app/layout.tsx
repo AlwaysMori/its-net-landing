@@ -23,12 +23,11 @@ export const metadata: Metadata = {
     template: "%s | IT.SEMESTA",
   },
   description:
-    "IT.SEMESTA menyediakan internet dedicated yang stabil dan cepat untuk kantor dan bisnis di Simpang Pematang – Pasar KTM Mesuji Timur. Fiber optik sendiri, 25 closure, support IT 24 jam.",
+    "IT.SEMESTA menyediakan internet dedicated yang stabil dan cepat untuk kantor dan bisnis. Fiber optik sendiri, support IT 24 jam. Cek coverage lokasi Anda via WhatsApp.",
   keywords: [
     "internet dedicated",
-    "ISP Mesuji",
-    "internet bisnis Lampung",
-    "fiber optik Mesuji Timur",
+    "internet bisnis",
+    "fiber optik",
     "IT.SEMESTA",
     "internet kantor stabil",
   ],
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "IT.SEMESTA",
     title: "IT.SEMESTA — Internet Dedicated, Selalu Stabil",
     description:
-      "Internet dedicated 100 Mbps – 1 Gbps untuk bisnis. Jaringan fiber Simpang Pematang – KTM Mesuji Timur. Hubungi sales via WhatsApp.",
+      "Internet dedicated 100 Mbps – 1 Gbps untuk bisnis. Fiber optik sendiri, support 24 jam. Cek coverage dan hubungi sales via WhatsApp.",
   },
   twitter: {
     card: "summary_large_image",
@@ -76,7 +75,7 @@ export default function RootLayout({
               "@type": "InternetServiceProvider",
               name: "IT.SEMESTA",
               slogan: "Innovation to High — Selalu Stabil",
-              areaServed: "Simpang Pematang - Pasar KTM Mesuji Timur",
+              areaServed: "Indonesia — konfirmasi coverage via WhatsApp",
               telephone: "+62-853-5362-6364",
             }),
           }}

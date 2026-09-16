@@ -9,7 +9,6 @@ import Infra from "./components/Infra";
 import UseCases from "./components/UseCases";
 import Process from "./components/Process";
 import Faq from "./components/Faq";
-import Testimonials from "./components/Testimonials";
 import FinalCta from "./components/FinalCta";
 import Footer from "./components/Footer";
 import StickyWa from "./components/StickyWa";
@@ -34,7 +33,6 @@ export default function Home() {
         <Infra />
         <UseCases />
         <Process />
-        <Testimonials />
         <Faq />
         <FinalCta />
       </main>

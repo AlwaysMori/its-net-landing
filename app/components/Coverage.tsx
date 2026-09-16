@@ -1,6 +1,6 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import { WA_COVERAGE } from "@/lib/site";
+import CoverageChecker from "./CoverageChecker";
 
 export default function Coverage() {
   return (
@@ -8,52 +8,45 @@ export default function Coverage() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
         <SectionHeading
           eyebrow="Coverage"
-          title="Apakah layanan tersedia di area Anda?"
-          desc="Jaringan luas dan terus berkembang di sepanjang jalur fiber Simpang Pematang – Pasar KTM Mesuji Timur."
+          title="Cek apakah lokasi Anda tercover"
+          desc="Ketik lokasi usaha Anda, langsung terhubung ke WhatsApp. Di dalam maupun luar jalur fiber, tim kami bantu cek dan survey."
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-stretch">
           <Reveal>
             <div className="flex h-full flex-col rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur sm:p-8">
-              <p className="text-xs font-semibold tracking-widest text-cyan-300 uppercase">
-                Area layanan kami
-              </p>
-              <h3 className="font-display mt-2 text-2xl font-bold">
-                FO terpasang: Simpang Pematang – Pasar KTM Mesuji Timur
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Tersedia 25 closure di sepanjang jalur FO. Jika lokasi usaha Anda
-                berada di sekitar jalur ini, kemungkinan besar sudah tercover.
-              </p>
-              <div className="mt-6 grid grid-cols-2 gap-3 text-center">
-                <div className="rounded-2xl bg-[#0A1A3D] p-4">
-                  <p className="font-display text-2xl font-extrabold text-white">25</p>
-                  <p className="text-xs text-slate-400">Closure tersedia</p>
-                </div>
-                <div className="rounded-2xl bg-[#0A1A3D] p-4">
-                  <p className="font-display text-2xl font-extrabold text-white">FO</p>
-                  <p className="text-xs text-slate-400">Jalur fiber terpasang</p>
-                </div>
+              <CoverageChecker id="coverage-lokasi" variant="dark" />
+              <ol className="mt-5 space-y-2.5 text-sm text-slate-300">
+                {[
+                  "1. Tulis patokan lokasi (jalan / desa / kecamatan).",
+                  "2. Klik Cek via WA — pesan otomatis terkirim.",
+                  "3. Tim balas: sudah tercover atau perlu survey lanjutan.",
+                ].map((t) => (
+                  <li key={t} className="flex gap-2.5">
+                    <span aria-hidden="true" className="text-[#22D3EE]">✓</span>
+                    {t}
+                  </li>
+                ))}
+              </ol>
+              <div className="mt-6 rounded-2xl bg-[#0A1A3D] p-5">
+                <p className="text-xs font-semibold tracking-widest text-cyan-300 uppercase">
+                  Coverage tersedia
+                </p>
+                <p className="font-display mt-1.5 text-base font-bold">
+                  ✅ Simpang Pematang - Pasar KTM Mesuji Timur
+                </p>
+                <p className="mt-1.5 text-sm leading-relaxed text-slate-300">
+                  Backbone FO Simpang Pematang – Pasar KTM Mesuji Timur dengan
+                  25 closure di sepanjang jalur. Sekitar jalur ini umumnya
+                  paling cepat tercover. Di luar area tersebut? Tetap bisa
+                  diajukan — hasil akhir mengikuti survey lapangan.
+                </p>
               </div>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={WA_COVERAGE}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-12 flex-1 items-center justify-center rounded-full bg-[#22D3EE] px-6 text-sm font-bold text-[#060F24] transition hover:bg-cyan-300"
-                >
-                  Cek Ketersediaan
-                </a>
-              </div>
-              <p className="mt-3 text-xs text-slate-400">
-                Ganti file gambar peta resmi di sini setelah Anda mengunggah peta coverage.
-                Untuk sekarang kami tampilkan visual jalur, tanpa titik fiktif.
-              </p>
             </div>
           </Reveal>
           <Reveal delay={120}>
             <div
               role="img"
-              aria-label="Visual jalur fiber dari Simpang Pematang ke Pasar KTM Mesuji Timur"
+              aria-label="Visual backbone fiber dari Simpang Pematang ke Pasar KTM Mesuji Timur, coverage tersedia Simpang Pematang"
               className="relative h-full min-h-[320px] overflow-hidden rounded-3xl border border-white/10 bg-[#0A1A3D] p-6"
             >
               <svg viewBox="0 0 400 320" className="absolute inset-0 h-full w-full" fill="none" aria-hidden="true">
@@ -83,15 +76,15 @@ export default function Coverage() {
               </svg>
               <div className="relative flex h-full flex-col justify-between">
                 <span className="w-fit rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-cyan-200">
-                  Jaringan luas & terus berkembang
+                  ✅ Tersedia: Simpang Pematang • Jaringan berkembang
                 </span>
                 <div className="flex items-end justify-between gap-3">
                   <div>
-                    <p className="text-xs text-slate-400">Titik awal</p>
+                    <p className="text-xs text-slate-400">Tersedia</p>
                     <p className="font-display text-sm font-bold">Simpang Pematang</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-slate-400">Titik akhir</p>
+                    <p className="text-xs text-slate-400">Backbone FO</p>
                     <p className="font-display text-sm font-bold">Pasar KTM Mesuji Timur</p>
                   </div>
                 </div>

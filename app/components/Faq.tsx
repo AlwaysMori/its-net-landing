@@ -16,7 +16,7 @@ const FAQS = [
   },
   {
     q: "Apakah tersedia di lokasi saya?",
-    a: "Fokus kami di sepanjang jalur FO Simpang Pematang – Pasar KTM Mesuji Timur dengan 25 closure. Cara tercepat: klik Cek Coverage dan kirim lokasi Anda via WhatsApp untuk pengecekan.",
+    a: "Cara tercepat: ketik lokasi Anda di form Cek Coverage, lalu kirim via WhatsApp. Tim akan cek apakah sudah tercover atau perlu survey lanjutan — termasuk untuk lokasi di luar jalur fiber utama.",
   },
   {
     q: "Berapa lama proses instalasi?",

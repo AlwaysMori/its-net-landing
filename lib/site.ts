@@ -13,6 +13,13 @@ export const WA_COVERAGE = waLink(
   "Halo IT.SEMESTA, saya ingin cek ketersediaan coverage di lokasi saya. Lokasi saya di: "
 );
 
+export function waCoverageLocation(location: string) {
+  const loc = location.trim() || "[isi lokasi / patokan / kecamatan]";
+  return waLink(
+    `Halo IT.SEMESTA, saya ingin cek coverage internet dedicated. Lokasi saya di: ${loc}. Apakah sudah tercover / bisa survey?`
+  );
+}
+
 export function waPackage(speed: string) {
   return waLink(
     `Halo IT.SEMESTA, saya tertarik dengan paket ${speed}. Saya ingin mengetahui detail layanan dan ketersediaannya.`

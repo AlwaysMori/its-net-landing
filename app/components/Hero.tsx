@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
-import { WA_COVERAGE, WA_GENERAL } from "@/lib/site";
+import CoverageChecker from "./CoverageChecker";
+import { WA_GENERAL } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -38,7 +39,7 @@ export default function Hero() {
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-semibold tracking-widest text-cyan-100 uppercase">
               <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[#22D3EE]" />
-              Internet Dedicated • Mesuji Timur
+              Internet Dedicated • Cek Coverage Area Anda
             </p>
           </Reveal>
           <Reveal delay={80}>
@@ -51,9 +52,9 @@ export default function Hero() {
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
-              IT.SEMESTA membangun jaringan fiber optik sendiri dari Simpang
-              Pematang hingga Pasar KTM Mesuji Timur — lebih cepat, lebih stabil,
-              untuk masa depan bisnis yang lebih baik.
+              IT.SEMESTA membangun jaringan fiber optik sendiri yang terus
+              berkembang — lebih cepat, lebih stabil, untuk masa depan bisnis
+              yang lebih baik.
             </p>
           </Reveal>
           <Reveal delay={240}>
@@ -86,8 +87,8 @@ export default function Hero() {
               <div className="flex items-center gap-2">
                 <dt className="sr-only">Infrastruktur</dt>
                 <dd>
-                  <strong className="font-display text-white">25 closure</strong>{" "}
-                  <span className="text-slate-400">sepanjang jalur FO</span>
+                  <strong className="font-display text-white">Fiber Optik</strong>{" "}
+                  <span className="text-slate-400">jaringan sendiri</span>
                 </dd>
               </div>
               <div className="flex items-center gap-2">
@@ -104,27 +105,18 @@ export default function Hero() {
           <div className="rounded-3xl border border-white/12 bg-white/[0.07] p-5 shadow-2xl backdrop-blur">
             <div className="flex items-center justify-between">
               <p className="text-xs font-semibold tracking-widest text-cyan-200 uppercase">
-                Jalur Fiber Terpasang
+                Cek Coverage
               </p>
               <span className="rounded-full bg-emerald-400/15 px-2.5 py-1 text-xs font-semibold text-emerald-300">
                 ● Live Network
               </span>
             </div>
             <div className="mt-4 rounded-2xl bg-[#0A1A3D] p-5">
-              <p className="text-sm text-slate-300">Simpang Pematang</p>
-              <div aria-hidden="true" className="my-3 flex items-center gap-1.5">
-                {Array.from({ length: 18 }).map((_, i) => (
-                  <span
-                    key={i}
-                    className={`h-1.5 flex-1 rounded-full ${i % 4 === 0 ? "bg-[#22D3EE]" : "bg-[#1E6BFF]/50"}`}
-                  />
-                ))}
-              </div>
-              <p className="text-sm text-slate-300">Pasar KTM Mesuji Timur</p>
+              <CoverageChecker id="hero-lokasi" variant="dark" />
               <div className="mt-4 grid grid-cols-3 gap-3 text-center">
                 {[
-                  ["25", "Closure"],
-                  ["FO", "Fiber Optik"],
+                  ["1:1", "Dedicated"],
+                  ["1 Gbps", "Max Speed"],
                   ["24/7", "Support"],
                 ].map(([v, l]) => (
                   <div key={l} className="rounded-xl bg-white/5 px-2 py-3">
@@ -134,16 +126,8 @@ export default function Hero() {
                 ))}
               </div>
             </div>
-            <a
-              href={WA_COVERAGE}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 flex h-11 items-center justify-center rounded-full bg-[#22D3EE] px-5 text-sm font-bold text-[#060F24] transition hover:bg-cyan-300"
-            >
-              Cek apakah lokasi saya tercover
-            </a>
-            <p className="mt-2.5 text-center text-xs text-slate-400">
-              Tanpa form — langsung chat WhatsApp sales.
+            <p className="mt-3 text-center text-xs text-slate-400">
+              Contoh backbone yang sudah terpasang ada di section Coverage.
             </p>
           </div>
         </Reveal>

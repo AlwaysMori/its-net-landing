@@ -5,17 +5,17 @@ import SectionHeading from "./SectionHeading";
 const DUMMIES = [
   {
     q: "Koneksi lebih stabil untuk operasional kasir dan admin.",
-    n: "Pemilik Ruko — Mesuji Timur",
+    n: "Pemilik Ruko",
     init: "R",
   },
   {
     q: "CCTV dan perangkat kantor jalan tanpa rebutan bandwidth.",
-    n: "Admin Kantor — Simpang Pematang",
+    n: "Admin Kantor",
     init: "A",
   },
   {
     q: "Support fast respon saat butuh bantuan teknis.",
-    n: "Operator Sekolah — KTM",
+    n: "Operator Sekolah",
     init: "S",
   },
 ];
@@ -26,7 +26,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <SectionHeading
           eyebrow="Testimoni"
-          title="Dipercaya operasional bisnis lokal"
+          title="Dipercaya operasional bisnis"
         />
         <p className="mx-auto mt-3 max-w-xl rounded-full border border-amber-300 bg-amber-50 px-4 py-2 text-center text-xs font-medium text-amber-800">
           Data dummy — ganti dengan testimoni asli pelanggan sebelum tayang publik.

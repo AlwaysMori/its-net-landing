@@ -12,7 +12,7 @@ const REASONS = [
   },
   {
     t: "Fiber optik milik sendiri",
-    d: "Jalur FO Simpang Pematang – KTM Mesuji Timur dengan 25 closure yang terus berkembang.",
+    d: "Infrastruktur FO sendiri yang terus berkembang. Detail contoh backbone ada di section Coverage.",
   },
   {
     t: "Support IT 24 jam",

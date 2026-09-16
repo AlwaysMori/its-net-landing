@@ -24,8 +24,8 @@ export default function Footer() {
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
-            Internet dedicated yang stabil dan cepat untuk kantor dan bisnis di
-            Simpang Pematang – Pasar KTM Mesuji Timur.
+            Internet dedicated yang stabil dan cepat untuk kantor dan bisnis.
+            Cek coverage lokasi Anda via WhatsApp.
           </p>
         </div>
         <nav aria-label="Navigasi footer">
@@ -59,7 +59,7 @@ export default function Footer() {
                 WhatsApp: {WA_DISPLAY}
               </a>
             </li>
-            <li className="text-slate-400">Area: Simpang Pematang – KTM Mesuji Timur</li>
+            <li className="text-slate-400">Coverage berkembang — cek via WhatsApp</li>
             <li className="text-slate-400">Support IT 24 jam via WhatsApp</li>
           </ul>
         </div>
