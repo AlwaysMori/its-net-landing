@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
+@theme {
+  --color-navy-950: #060f24;
+  --color-navy-900: #0a1a3d;
+  --color-navy-800: #0a2a6b;
+  --color-brand-700: #0b3ba8;
+  --color-brand-600: #1250d6;
+  --color-brand-500: #1e6bff;
+  --color-cyan-glow: #00b8ff;
+  --color-cyan-soft: #22d3ee;
+  --color-mist-50: #f4f7fe;
+  --color-mist-100: #e8eefb;
+  --color-mist-200: #d3e0f7;
+  --color-ink-900: #0b1526;
+  --color-ink-600: #3d4e68;
+  --color-ink-500: #5b6b84;
+  --color-wa-600: #16a34a;
+  --color-wa-700: #15803d;
+
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0b1526;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* subtle reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* fiber line animation */
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+.fiber-flow {
+  stroke-dasharray: 6 14;
+  animation: dash-flow 6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fiber-flow {
+    animation: none;
+  }
+}
+
+/* focus visibility */
+:where(a, button):focus-visible {
+  outline: 3px solid #22d3ee;
+  outline-offset: 2px;
+  border-radius: 6px;
 }
